@@ -1,3 +1,5 @@
+import 'package:flash_chat/screens/login_screen.dart';
+import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 
@@ -12,7 +14,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF618264),
+      backgroundColor: kScaffoldBackgroundColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -46,7 +48,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to login screen.
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (Context) {
+                      return LoginScreen();
+                    }));
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -65,7 +70,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to Registration screen.
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (Context) {
+                      return const RegistrationScreen();
+                    }));
                   },
                   minWidth: 200.0,
                   height: 42.0,
