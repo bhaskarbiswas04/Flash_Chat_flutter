@@ -75,10 +75,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             //TODO: Write a widged to re-enter your password and check whether the password matches.
 
             const SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             Padding(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 24.0),
+              padding: EdgeInsetsDirectional.symmetric(vertical: 16.0),
               child: Material(
                 color: const Color(0xFF79AC78),
                 borderRadius: const BorderRadius.all(Radius.circular(30.0)),
@@ -99,11 +99,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10.0,
-            ),
+
             Padding(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 24.0),
+              padding: const EdgeInsetsDirectional.symmetric(vertical: 0.0),
               child: Material(
                 color: const Color(0xFF618264),
                 borderRadius: const BorderRadius.all(Radius.circular(30.0)),
