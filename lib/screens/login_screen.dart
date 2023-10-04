@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously, unnecessary_null_comparison
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flash_chat/constants.dart';
@@ -79,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       final existingUser =
                           await _auth.signInWithEmailAndPassword(
                               email: emailLog, password: passwordLog);
+
                       if (existingUser != null) {
                         Navigator.pushNamed(context, ChatScreen.id);
                       }
