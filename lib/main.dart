@@ -3,8 +3,14 @@ import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flash_chat/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async{
+
+  //we have to initialise firebase before using any of its services.
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(const FlashChat());
 }
 
@@ -28,3 +34,9 @@ class FlashChat extends StatelessWidget {
     );
   }
 }
+
+
+
+// import 'package:firebase_core/firebase_core.dart';
+
+// import 'package:cloud_firestore/cloud_firestore.dart';
