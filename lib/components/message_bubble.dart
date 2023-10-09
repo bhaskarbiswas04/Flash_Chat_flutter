@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-//Include all the essential imports.
-
 final _fireStore = FirebaseFirestore.instance;
 
 //This widget will create bubbles of messages.
